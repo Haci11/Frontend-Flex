@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+* {
+  padding: 0 ;
+  margin: 0;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.card__body {
+  padding: 2rem;
+}
+
+.card__body:first-child{
+  border-radius:  10px 0 0  10px;
+}
+.card__body:last-child{
+  border-radius:  0 10px 10px 0;
+}
+
+.card__orange {
+  background-color: var(--Bright-orange);
+}
+.card__cyan {
+  background-color: var(--Dark-cyan);
+}
+.card__drakcyan {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card__body h1 {
+  color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+.card__body p {
+  margin-top: 2rem;
+  color: var(--Transparent-white);
+  line-height: 1.5rem;
+}
+
+.card__body a{
+  display: inline-block;
+  background-color: var(--Very-light-gray);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  margin-top: 5rem;
+  border: 2px solid var(--Very-light-gray);
+  transition: all .4s ease-in-out;
+}
+
+.card__body a:hover {
+  color: hsl(0, 0%, 95%);
+  background: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+  .container{
+    height: 100%;
+  }
+  .card{
+    margin: 2rem;
+    flex-wrap: wrap;
+  }
+  .card__body:first-child{
+    border-radius:  10px 10px 0 0;
+  }
+  .card__body:last-child{
+    border-radius:  0 0 10px 10px;
+  }
+ 
+}
